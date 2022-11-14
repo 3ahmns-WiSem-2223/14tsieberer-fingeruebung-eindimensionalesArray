@@ -20,5 +20,26 @@ public class FingeruebungScript : MonoBehaviour
         }
 
         arrayColoredImagesRed = GameObject.FindGameObjectsWithTag("RedImage");
+
+        AusgabeErstes();
+        AusgabeLetztes();
+    }
+
+    // 1) auf erstes Element -- Jeweils ein Debug.Log ausgeben. Beim arrayColoredImageRed den Namen des Objektes ausgeben.
+    private void AusgabeErstes()
+    {
+        Debug.Log("array1 erste Zahl: " + array1[0]);
+        Debug.Log("array2 erste Zahl: " + array2[0]);
+        Debug.Log("array3 erste Zahl: " + array3[0]);
+        Debug.Log("array4 erster String: " + array4[0]);
+        Debug.Log("arrayColoredImagesRed erstes Object: " + arrayColoredImagesRed[0].name);
+    }
+    private void AusgabeLetztes()
+    {
+        Debug.Log("array1 letzte Zahl: " + array1[array1.Length-1]);
+        Debug.Log("array2 letzte Zahl: " + array2[array2.Length - 1]);
+        Debug.Log("array3 letzte Zahl: " + array3[array3.Length - 1]);
+        Debug.Log("array4 letzter String: " + array4[array4.Length - 1]);
+        Debug.Log("arrayColoredImagesRed letztes Object: " + arrayColoredImagesRed[arrayColoredImagesRed.Length-1].name);
     }
 }
