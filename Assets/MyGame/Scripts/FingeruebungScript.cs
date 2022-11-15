@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FingeruebungScript : MonoBehaviour
 {
@@ -23,6 +22,8 @@ public class FingeruebungScript : MonoBehaviour
 
         AusgabeErstes();
         AusgabeLetztes();
+        WertMitIndex();
+        WertAlsString();
     }
 
     // 1) auf erstes Element -- Jeweils ein Debug.Log ausgeben. Beim arrayColoredImageRed den Namen des Objektes ausgeben.
@@ -34,6 +35,8 @@ public class FingeruebungScript : MonoBehaviour
         Debug.Log("array4 erster String: " + array4[0]);
         Debug.Log("arrayColoredImagesRed erstes Object: " + arrayColoredImagesRed[0].name);
     }
+
+    // 2) auf letzes Element -- Jeweils ein Debug.Log ausgeben. Beim arrayColoredImageRed den Namen des Objektes ausgeben.
     private void AusgabeLetztes()
     {
         Debug.Log("array1 letzte Zahl: " + array1[array1.Length-1]);
@@ -41,5 +44,27 @@ public class FingeruebungScript : MonoBehaviour
         Debug.Log("array3 letzte Zahl: " + array3[array3.Length - 1]);
         Debug.Log("array4 letzter String: " + array4[array4.Length - 1]);
         Debug.Log("arrayColoredImagesRed letztes Object: " + arrayColoredImagesRed[arrayColoredImagesRed.Length-1].name);
+    }
+
+    //1) Eine Methode schreiben die die Werte mit zugehörigen index als Debug.Log ausgibt.
+    private void WertMitIndex()
+    {
+        for(int i = 0; i < array3.Length; i++)
+        {
+            Debug.Log("Wert von array3 an Index " + i + " = " + array3 [i].ToString());
+        }
+    }
+
+    //2) Eine Methode schreiben die die Werte des Arrays als einen langen string ausgibt, z.b. 1 2 3 4
+    private void WertAlsString()
+    {
+        string allValues = "";
+
+        for(int i = 0; i < array3.Length; i++)
+        {
+            allValues = allValues + " " + array3[i].ToString();
+        }
+
+        Debug.Log(allValues);
     }
 }
