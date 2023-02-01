@@ -22,3 +22,12 @@ testArray[testArray.Length - 1]
 …wobei Array.Length die Anzahl der Elemente im Array angibt, also praktisch n.
 
 ![IMG_0455](https://user-images.githubusercontent.com/114923448/201669210-efb81e44-71c1-4cb2-9c3a-1bf9a6899ff1.jpg)
+
+<br></br>
+Dev. Platform:
+
+Unity Version: 2020.3.18f1
+
+VS Version: Visual Studio 2019
+
+Betriebssystem: Windows 11
